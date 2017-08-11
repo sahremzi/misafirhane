@@ -1,0 +1,48 @@
+
+
+CREATE TABLE dbo.WmMenu (
+  MenuId INT IDENTITY,
+  MenuAdi VARCHAR(100) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+  MenuLink VARCHAR(150) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+  MenuTip VARCHAR(10) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+  MenuSira INT NULL,
+  MenuGorunum BIT NULL,
+  MenuIcon NVARCHAR(25) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+  MenuParent INT NULL,
+  MenuController NVARCHAR(100) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+  MenuAction NVARCHAR(100) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+  CONSTRAINT PK_WM_Menu PRIMARY KEY CLUSTERED (MenuId)
+) ON [PRIMARY]
+GO
+
+
+CREATE TABLE dbo.WmMenuYetki (
+  MenuYetkiId INT IDENTITY,
+  MenuYetkiGrupId INT NULL,
+  MenuYetkiMenuId INT NULL,
+  PRIMARY KEY CLUSTERED (MenuYetkiId),
+  CONSTRAINT FK_WM_MenuYetki_WM_Menu FOREIGN KEY (MenuYetkiMenuId) REFERENCES dbo.WmMenu (MenuId),
+  CONSTRAINT FK_WmMenuYetki_YtGrup FOREIGN KEY (MenuYetkiGrupId) REFERENCES dbo.YtGrup (YTGrupId)
+) ON [PRIMARY]
+GO
+
+CREATE TABLE dbo.YtGrup (
+  YTGrupId INT IDENTITY,
+  YtGrupAdi NVARCHAR(25) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+  YtGrupAciklama NVARCHAR(100) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+  CONSTRAINT PK_YtGrup PRIMARY KEY CLUSTERED (YTGrupId)
+) ON [PRIMARY]
+GO
+
+
+CREATE TABLE dbo.YtGrupDetay (
+  YtGrupDetayId INT IDENTITY,
+  KullaniciId INT NULL,
+  YtGrupId INT NULL,
+  YtGrupDetayAciklama NVARCHAR(250) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+  PersonelId INT NULL,
+  CONSTRAINT PK_YtGrupDetay PRIMARY KEY CLUSTERED (YtGrupDetayId),
+  CONSTRAINT FK_YtGrupDetay_Personel FOREIGN KEY (PersonelId) REFERENCES dbo.Personel (PersonelId) ON DELETE CASCADE,
+  CONSTRAINT FK_YtGrupDetay_YtGrup FOREIGN KEY (YtGrupId) REFERENCES dbo.YtGrup (YTGrupId)
+) ON [PRIMARY]
+GO

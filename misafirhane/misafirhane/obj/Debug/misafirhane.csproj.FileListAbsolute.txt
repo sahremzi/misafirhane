@@ -1,0 +1,12 @@
+c:\users\ebim-st\documents\visual studio 2015\Projects\misafirhane\misafirhane\bin\Debug\misafirhane.exe.config
+c:\users\ebim-st\documents\visual studio 2015\Projects\misafirhane\misafirhane\bin\Debug\misafirhane.exe
+c:\users\ebim-st\documents\visual studio 2015\Projects\misafirhane\misafirhane\bin\Debug\misafirhane.pdb
+c:\users\ebim-st\documents\visual studio 2015\Projects\misafirhane\misafirhane\obj\Debug\misafirhane.csprojResolveAssemblyReference.cache
+c:\users\ebim-st\documents\visual studio 2015\Projects\misafirhane\misafirhane\obj\Debug\misafirhane.Odalar.resources
+c:\users\ebim-st\documents\visual studio 2015\Projects\misafirhane\misafirhane\obj\Debug\misafirhane.MisafirhaneGiris.resources
+c:\users\ebim-st\documents\visual studio 2015\Projects\misafirhane\misafirhane\obj\Debug\misafirhane.OdaKayit.resources
+c:\users\ebim-st\documents\visual studio 2015\Projects\misafirhane\misafirhane\obj\Debug\misafirhane.Properties.Resources.resources
+c:\users\ebim-st\documents\visual studio 2015\Projects\misafirhane\misafirhane\obj\Debug\misafirhane.csproj.GenerateResource.Cache
+c:\users\ebim-st\documents\visual studio 2015\Projects\misafirhane\misafirhane\obj\Debug\misafirhane.exe
+c:\users\ebim-st\documents\visual studio 2015\Projects\misafirhane\misafirhane\obj\Debug\misafirhane.pdb
+C:\Users\Ebim-ST\documents\visual studio 2015\Projects\misafirhane\misafirhane\obj\Debug\misafirhane.odadetay.resources
